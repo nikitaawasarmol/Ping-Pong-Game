@@ -7,22 +7,42 @@
     <title>Ping-Pong</title>
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
         * {
             padding: 0;
             margin: 0;
+            box-sizing: border-box;
+        }
+        div {
+           margin-bottom: 50px;
+           font-size: 2rem;
+           font-family: 'Dela Gothic One', cursive;
         }
         body {
             width: 100vw;
             height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+            background: url(https://images.pexels.com/photos/628281/pexels-photo-628281.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
         }
+        canvas {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+        }
+
     </style>
 </head>
 <body>
+    <div>
+        <h1>Follow and Hit!</h1>
+    </div>
+    
     <canvas id="canvas" width="800" height="600"></canvas>
-<script src="script.js"></script>
+<script src="/script.js"></script>
 </body>
 </html>
 
