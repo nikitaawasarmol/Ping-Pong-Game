@@ -171,15 +171,13 @@ function update() {
 
   // check if ball hits top or bottom wall
   if (ball.y + ball.radius >= canvas.height || ball.y - ball.radius <= 0) {
-    // play wallHitSound
-    wallHitSound.play();
+    
     ball.velocityY = -ball.velocityY;
   }
 
    // if ball hit on right wall
    if (ball.x + ball.radius >= canvas.width) {
-    // play scoreSound
-    scoreSound.play();
+    
     // then user scored 1 point
     user.score += 1;
     reset();
@@ -187,8 +185,6 @@ function update() {
 
   // if ball hit on left wall
   if (ball.x - ball.radius <= 0) {
-    // play scoreSound
-    scoreSound.play();
     // then ai scored 1 point
     ai.score += 1;
     reset();
@@ -205,8 +201,7 @@ function update() {
   let player = (ball.x < canvas.width / 2) ? user : ai;
 
   if (collisionDetect(player, ball)) {
-    // play hitSound
-    hitSound.play();
+   
     // default angle is 0deg in Radian
     let angle = 0;
 
@@ -238,7 +233,7 @@ grad.addColorStop(1, "grey");
 ctx.fillStyle = grad;
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  // draw net
+
   drawNet();
   // draw user score
   drawScore(canvas.width / 4, canvas.height / 6, user.score);
@@ -254,9 +249,9 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 // gameLoop
 function gameLoop() {
-  // update() function here
+  // update() function 
   update();
-  // render() function here
+  // render() function 
   render();
 }
 
